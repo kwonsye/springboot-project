@@ -1,6 +1,5 @@
-package com.kwonsye.springboot.webservice.dto;
+package com.kwonsye.springboot.webservice.web.dto;
 
-import com.kwonsye.springboot.webservice.web.dto.HelloResponseDto;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
