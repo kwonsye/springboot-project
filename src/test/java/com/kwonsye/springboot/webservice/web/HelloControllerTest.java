@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class) //SpringRunner 라는 스프링 실행자 사용해서 테스트 진행
-@WebMvcTest(controllers = HelloController.class) //Web(Spring MVC)에 집중할 수 있는 어노테이션
+@WebMvcTest(controllers = HelloController.class) //Web(Spring MVC)에 집중할 수 있는 어노테이션, JPA 기능은 작동x
 public class HelloControllerTest {
     @Autowired//빈 주입
     private MockMvc mvc; //웹 API를 테스트할때 사용, 스프링 mvc 테스트의 시작점
