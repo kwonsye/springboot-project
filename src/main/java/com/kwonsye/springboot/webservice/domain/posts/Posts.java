@@ -28,4 +28,9 @@ public class Posts { //DB와 맞닿는 핵심클래스
         this.content = content;
         this.author = author;
     }
+
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
+    }
 }
