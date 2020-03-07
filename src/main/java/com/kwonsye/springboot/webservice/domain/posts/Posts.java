@@ -1,5 +1,6 @@
 package com.kwonsye.springboot.webservice.domain.posts;
 
+import com.kwonsye.springboot.webservice.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor //기본생성자 자동추가
 @Entity //JPA, DB 테이블과 매칭될 클래스=Entity class , 절대 Setter를 만들지 않는다.
-public class Posts { //DB와 맞닿는 핵심클래스
+public class Posts extends BaseTimeEntity { //DB와 맞닿는 핵심클래스
     @Id //PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK 생성규칙 GenerationType.IDENTITY만 auto-increment됨
     private Long id;
