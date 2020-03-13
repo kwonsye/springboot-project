@@ -32,5 +32,6 @@ dependencies { //사용할 의존성
     compile('org.springframework.boot:spring-boot-starter-data-jpa') //Spring Data Jpa
     compile('com.h2database:h2') //h2 : 인메모리 RDB, 애플리케이션 재시작시마다 초기화->테스트용
     compile('org.springframework.boot:spring-boot-starter-mustache') //mustache 템플릿 엔진
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client') //스프링 시큐리티 : 소셜 기능 구현시 필요
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
