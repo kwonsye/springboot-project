@@ -1,5 +1,6 @@
 package com.kwonsye.springboot.webservice.web;
 
+import com.kwonsye.springboot.webservice.config.auth.LoginUser;
 import com.kwonsye.springboot.webservice.config.auth.dto.SessionUser;
 import com.kwonsye.springboot.webservice.service.posts.PostsService;
 import com.kwonsye.springboot.webservice.web.dto.PostsResponseDto;
@@ -19,9 +20,9 @@ public class IndexController { //mustache url 매핑
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", postsService.findAllDesc()); //데이터를 posts로 index.mustache에 전달
-        SessionUser user = (SessionUser) httpSession.getAttribute("user"); //이미 로그인해서 세션에 존재하는 user가져옴
+        //SessionUser user = (SessionUser) httpSession.getAttribute("user"); //이미 로그인해서 세션에 존재하는 user가져옴
 
         if(user!=null){
             model.addAttribute("userName",user.getName()); //로그인했다면 userName 넘김
