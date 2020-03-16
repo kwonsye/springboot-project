@@ -32,7 +32,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         String registrationId = userRequest.getClientRegistration().getRegistrationId(); //로그인 진행 중인 서비스 아이디
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
-                                                    .getUserInfoEndpoint().getUserNameAttributeName(); //로그인 진행시 PK가 되는 필드값
+                                                    .getUserInfoEndpoint().getUserNameAttributeName(); //로그인 진행시 PK가 되는 필드값 user_name
 
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes()); //OAuth2UserService 를 통해 가져온 user attributes
 
